@@ -37,12 +37,12 @@ function windowResized() {
 
 function rotateCerchio(){
   translate(width/2, height/2)
-  cerchio_01(a)
-  cerchio_01(-a)
+  retino(a)
+  retino(-a)
 }
 
 // star pattern star(x, y, radius1, radius2, npoints)
-function cerchio_01(rotation){
+function retino(rotation){
   push()
   rotate(rotation)
   for (var x = 0; x <= lg_diam; x+=distance) {
