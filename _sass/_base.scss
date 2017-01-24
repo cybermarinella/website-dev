@@ -34,6 +34,14 @@ body {
 
     }
 
+    a.navbar-brand{
+      position: relative;
+      z-index: 100;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
     blockquote, .navbar-toggle .icon-bar{
       -webkit-animation: background-change 30s infinite !important;
       -moz-animation: background-change 30s infinite !important;

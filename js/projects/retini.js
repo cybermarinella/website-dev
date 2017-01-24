@@ -7,7 +7,6 @@ var lg_diam
 var lg_rad
 var a //atan
 
-var starRadius
 
 function setup(){
   var myCanvas = createCanvas(windowWidth, windowHeight);

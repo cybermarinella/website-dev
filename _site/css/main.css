@@ -6079,6 +6079,11 @@ body {
     line-height: 1.2em; }
   body .navbar {
     background: rgba(242, 242, 242, 0.9); }
+  body a.navbar-brand {
+    position: relative;
+    z-index: 100; }
+    body a.navbar-brand:hover {
+      text-decoration: underline; }
   body blockquote, body .navbar-toggle .icon-bar {
     -webkit-animation: background-change 30s infinite !important;
     -moz-animation: background-change 30s infinite !important;
