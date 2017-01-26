@@ -14,9 +14,11 @@ layout: default
   </div>
   <div class="row">
     {% for person in site.people %}
-    <div class="col-xs-4 single-people text-center">
-      <h2 class="text-center"><a href="{{ site.url }}{{ person.url }}">{{ person.display_name }}</a></h2>
-      <p>{{ person.about }}</p>
+    <div class="col-xs-4 col-sm-3 text-center">
+      <div class="single-people">
+        <h3 class="text-center"><a href="{{ site.url }}{{ person.url }}">{{ person.display_name }}</a></h3>
+        <p>{{ person.about }}</p>
+      </div>
     </div>
     {% endfor %}
   </div>
