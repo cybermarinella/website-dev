@@ -221,32 +221,29 @@ $(document).ready(function() {
     }
   }
 
-  /*
-   Show navbar on scroll
-   */
-
   // hide .navbar first
   $(".navbar").css("opacity","0")
 
-  // fade in .navbar
-  $(function () {
-    $(window).scroll(function () {
-      // set distance user needs to scroll before we start fadeIn
-      if ($(this).scrollTop() > 100) {
-        $(".navbar").css("opacity","1");
-      } else {
-        $(".navbar").css("opacity","0");
-      }
-      });
-  });
+ 
 });
 
 $(window).on('scroll', function (event) {
+  var h = window.innerHeight;
   var scrollPosition = $(document).scrollTop();
   var pixs = scrollPosition / 100;
   var piys = pixs;
+  
+   // fade in .navbar
+  if(scrollPosition < h/2){
+    $(".navbar").css("opacity","0");
+  }else {
+    $(".navbar").css("opacity","1");
+ }
+
   $("#defaultCanvas0").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)"});  
-  //console.log("height"+ h +"; scroll position" + scrollPosition)
+
+  console.log( h + " | " + scrollPosition);
+
 });
     
 

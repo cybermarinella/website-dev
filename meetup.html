@@ -1,16 +1,11 @@
 ---
 layout: default
 ---
+<div id="map"></div>
 <div class="container" id="meetup">
   <div class="row page-title">
     <div class="col-xs-12">
       <h1>Circoli Inutili</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div id="map">
-      </div>
     </div>
   </div>
   <div class="row">
@@ -32,17 +27,24 @@ layout: default
     {% endfor %}
   </div>
 </div><!--/.container-->
+
 <!-- Google Maps API -->
 <script>
   function initMap() {
+    var layer = "toner";
     var rome = {lat: 41.902783, lng: 12.496366};
     var map = new google.maps.Map(document.getElementById('map'), {
       scrollwheel: false,
       zoom: 6,
-      center: rome
+      center: rome/*,
+      mapTypeId: layer,
+      mapTypeControlOptions: {
+          mapTypeIds: [layer]
+      }*/
     });
 
-    {% for meetup in site.meetup %}
+
+   {% for meetup in site.meetup %}
       {% increment counter %}
 
       var contentString = '{{ meetup.title }}';
@@ -64,6 +66,9 @@ layout: default
 
     {% endfor %}
 
+       // map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
+
   }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0us4pRp0E8btrmGueIHwRx5ELsYsjU_w&callback=initMap"></script>
+<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
