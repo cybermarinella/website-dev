@@ -19,7 +19,7 @@ usati per ottenere diversi tipi di campiture, presenti in ambito tecnico e artis
 Sovrapponendoli è possibile ottenere bizzarri effetti ottici. 
 
 Del codice semplice per iniziare.<br>
-Il codice genera retini casuali e varia il rapporto soggetto sfondo in base alla posizione del mouse. Per completare il progetto mi piacerebbe vincolare tutti gli oggetti alla proporzione aurea.
+Il codice genera retini casuali e inverte il peso di soggetto / sfondo in base alla posizione del mouse. Per completare il progetto mi piacerebbe vincolare tutti i rapporti numerici alla proporzione aurea.
 
 
 {% highlight javascript %}
