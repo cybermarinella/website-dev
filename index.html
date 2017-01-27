@@ -20,31 +20,39 @@ layout: default
 
 <div class="flexbox-container negative">
   <div id="carousel-example-generic" class="carousel slide fullsize flexbox-container" data-ride="carousel">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <!-- Wrapper for slides -->
           <div class="carousel-inner " role="listbox">
             <div class="item active">
-              <svg viewBox="0 0 2100 2200" xml:space="preserve" width="120" >
-                <polygon class="chiaro" points="1400,400 1400,500 700,500 400,500 400,800 400,900 700,900 700,800 1400,800 1400,1200 1700,1200 1700,400  "/>
-                <polygon class="chiaro" points="700,1800 700,1700 1400,1700 1700,1700 1700,1400 1700,1300 1400,1300 1400,1400 700,1400 700,1000 400,1000
-                  400,1800  "/>
-              </svg>
-              <p class="lead">La missione di Codice Inutile &egrave; sviluppare il concetto di creative coding: l'uso non convenzionale di algoritmi e linguaggi di programmazione in ambito artistico, performativo e audiovisivo.</p>
-              <p style="height:8em">Il progetto, che ambisce ad affermarsi su tutto il territorio nazionale, ha lo scopo di diffondere la cultura del codice, in genere riservata solo agli sviluppatori e agli addetti ai lavori, e di renderla accessibile a un pubblico pi&ugrave; vasto attraverso l'organizzazione di incontri, workshop, conferenze, performance e progetti formativi.</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <svg viewBox="0 0 2100 2200" xml:space="preserve" width="120" >
+                      <polygon class="chiaro" points="1400,400 1400,500 700,500 400,500 400,800 400,900 700,900 700,800 1400,800 1400,1200 1700,1200 1700,400  "/>
+                      <polygon class="chiaro" points="700,1800 700,1700 1400,1700 1700,1700 1700,1400 1700,1300 1400,1300 1400,1400 700,1400 700,1000 400,1000
+                        400,1800  "/>
+                    </svg>
+                    <p class="lead">La missione di Codice Inutile &egrave; sviluppare il concetto di creative coding: l'uso non convenzionale di algoritmi e linguaggi di programmazione in ambito artistico, performativo e audiovisivo.</p>
+                    <p style="height:8em">Il progetto, che ambisce ad affermarsi su tutto il territorio nazionale, ha lo scopo di diffondere la cultura del codice, in genere riservata solo agli sviluppatori e agli addetti ai lavori, e di renderla accessibile a un pubblico pi&ugrave; vasto attraverso l'organizzazione di incontri, workshop, conferenze, performance e progetti formativi.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="item">
-              <svg viewBox="0 0 2100 2200" xml:space="preserve" width="120" >
-                <polygon class="chiaro" points="1400,400 1400,500 700,500 400,500 400,800 400,900 700,900 700,800 1400,800 1400,1200 1700,1200 1700,400  "/>
-                <polygon class="chiaro" points="700,1800 700,1700 1400,1700 1700,1700 1700,1400 1700,1300 1400,1300 1400,1400 700,1400 700,1000 400,1000
-                  400,1800  "/>
-              </svg>
-              <p class="lead">"Resta da chiarire l'aggettivo  'inutile' : inutili perché non fabbricano, non eliminano manodopera, non fanno economizzare tempo e denaro, non producono niente di commerciabile."</p>
-              <p style="height:8em">Bruno Munari in Le macchini inutili e perchè, La Lettura – 1 Luglio 1937</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <svg viewBox="0 0 2100 2200" xml:space="preserve" width="120" >
+                      <polygon class="chiaro" points="1400,400 1400,500 700,500 400,500 400,800 400,900 700,900 700,800 1400,800 1400,1200 1700,1200 1700,400  "/>
+                      <polygon class="chiaro" points="700,1800 700,1700 1400,1700 1700,1700 1700,1400 1700,1300 1400,1300 1400,1400 700,1400 700,1000 400,1000
+                        400,1800  "/>
+                    </svg>
+                    <p class="lead">"Resta da chiarire l'aggettivo  'inutile' : inutili perché non fabbricano, non eliminano manodopera, non fanno economizzare tempo e denaro, non producono niente di commerciabile."</p>
+                    <p style="height:8em">Bruno Munari in Le macchini inutili e perchè, La Lettura – 1 Luglio 1937</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>       
-        </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -58,11 +66,8 @@ layout: default
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
       </div>
-
-    </div>
   </div> <!--/.container-->
 </div>
 
@@ -234,7 +239,15 @@ $(document).ready(function() {
       }
       });
   });
-
-
 });
+
+$(window).on('scroll', function (event) {
+  var scrollPosition = $(document).scrollTop();
+  var pixs = scrollPosition / 100;
+  var piys = pixs;
+  $("#defaultCanvas0").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)"});  
+  //console.log("height"+ h +"; scroll position" + scrollPosition)
+});
+    
+
 </script>
