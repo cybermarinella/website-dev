@@ -9,10 +9,8 @@ body {
     font-family: $inconsolata;
     background: $white;
     color: $black;
-    height: 100%;
     font-size: 16px;
     overflow-x: hidden; /*sarebbe meglio correggere js*/
-    padding-bottom:3em;
 
     a:hover, h1, .active, a, a:visited, svg * , .title, h5{
       -webkit-animation: color-change 30s infinite !important;
@@ -42,7 +40,7 @@ body {
       }
     }
 
-    blockquote, .navbar-toggle .icon-bar{
+    blockquote, .navbar-toggle .icon-bar, .negative{
       -webkit-animation: background-change 30s infinite !important;
       -moz-animation: background-change 30s infinite !important;
       -o-animation: background-change 30s infinite !important;
@@ -50,9 +48,10 @@ body {
       animation: background-change 30s infinite !important;
       text-align: center;
       border:0;
-      footer{
+      footer, p{
         color: $white;
       }
+
     }
 
     blockquote{
@@ -69,10 +68,6 @@ body {
             }
         }
     }
-}
-
-header.main {
-  margin-bottom: 70px;
 }
 
 #map {
@@ -95,6 +90,8 @@ h1.fa {
 /*SPECIALS*/
 html, body{
   height: 100%; //fullHeight
+  margin: 0;
+  padding:0;
 }
 .navbar-collapse{
   margin-top: 1em;
@@ -124,12 +121,8 @@ html, body{
   }
 }
 
-.rowPadding{
-  padding: 30px;
-  border-top: 1px solid $ultraWhite;
-    &:first-child{
-      padding-top:7em;
-        }
+.ultraWhite{
+  background:$ultraWhite !important;
 }
 
 .miniNav{
@@ -149,23 +142,11 @@ html, body{
   }
 }
 
-.flexbox-container {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  align-items: center;
-}
-.cover {
-  max-width: 100%;
+.fullsize{
+  width: 100%;
   height: 100%;
-  padding: 0;
-  margin-top: -70px;
-  text-align: center;
-  display: block;
 }
+
 .title {
   background: $black;
   position: absolute;
@@ -201,6 +182,10 @@ html, body{
   padding:0.5em;
 }
 
+svg .chiaro{
+  animation:none !important; webkit-animation: none !important; -moz-animation:none !important; -o-animation:none !important; -ms-animation:none !important;
+  fill:$white;
+}
 /*
  * Loading Spinner
  * Code generated with: http://loading.io

@@ -6062,11 +6062,9 @@ body {
   font-family: "Inconsolata", sans-serif;
   background: #f2f2f2;
   color: #1a1a1a;
-  height: 100%;
   font-size: 16px;
   overflow-x: hidden;
-  /*sarebbe meglio correggere js*/
-  padding-bottom: 3em; }
+  /*sarebbe meglio correggere js*/ }
   body a:hover, body h1, body .active, body a, body a:visited, body svg *, body .title, body h5 {
     -webkit-animation: color-change 30s infinite !important;
     -moz-animation: color-change 30s infinite !important;
@@ -6084,7 +6082,7 @@ body {
     z-index: 100; }
     body a.navbar-brand:hover {
       text-decoration: underline; }
-  body blockquote, body .navbar-toggle .icon-bar {
+  body blockquote, body .navbar-toggle .icon-bar, body .negative {
     -webkit-animation: background-change 30s infinite !important;
     -moz-animation: background-change 30s infinite !important;
     -o-animation: background-change 30s infinite !important;
@@ -6092,7 +6090,7 @@ body {
     animation: background-change 30s infinite !important;
     text-align: center;
     border: 0; }
-    body blockquote footer, body .navbar-toggle .icon-bar footer {
+    body blockquote footer, body blockquote p, body .navbar-toggle .icon-bar footer, body .navbar-toggle .icon-bar p, body .negative footer, body .negative p {
       color: #f2f2f2; }
   body blockquote {
     margin: 1em 0; }
@@ -6102,9 +6100,6 @@ body {
     body footer ul.social li {
       display: inline-block;
       margin: 0 1em; }
-
-header.main {
-  margin-bottom: 70px; }
 
 #map {
   width: 100%;
@@ -6122,7 +6117,9 @@ h1.fa {
 
 /*SPECIALS*/
 html, body {
-  height: 100%; }
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
 .navbar-collapse {
   margin-top: 1em; }
@@ -6145,11 +6142,8 @@ html, body {
   .navbar-toggle .icon-bar {
     margin: 0; }
 
-.rowPadding {
-  padding: 30px;
-  border-top: 1px solid #fff; }
-  .rowPadding:first-child {
-    padding-top: 7em; }
+.ultraWhite {
+  background: #fff !important; }
 
 .miniNav li {
   margin: 0 1em; }
@@ -6161,22 +6155,9 @@ html, body {
     opacity: 1;
     position: absolute; }
 
-.flexbox-container {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  align-items: center; }
-
-.cover {
-  max-width: 100%;
-  height: 100%;
-  padding: 0;
-  margin-top: -70px;
-  text-align: center;
-  display: block; }
+.fullsize {
+  width: 100%;
+  height: 100%; }
 
 .title {
   background: #1a1a1a;
@@ -6205,6 +6186,14 @@ html, body {
   margin: 0;
   min-height: 240px;
   padding: 0.5em; }
+
+svg .chiaro {
+  animation: none !important;
+  webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  fill: #f2f2f2; }
 
 /*
  * Loading Spinner
@@ -6238,6 +6227,16 @@ html, body {
       position: absolute;
       width: 100%;
       margin-top: 0; }
+  body .flexbox-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
   body .navbar-toggle {
     opacity: 0;
     display: block; } }
