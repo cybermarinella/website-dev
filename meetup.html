@@ -6,28 +6,34 @@ layout: default
   <div class="row page-title">
     <div class="col-xs-12">
       <h1>Circoli Inutili</h1>
+      <p class="lead">I Circoli Inutili sono stati pensati per portare il creative coding sul territorio favorendo l'incontro, lo scambio e la condivisione.</p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <p class="lead">I Circoli Inutili sono stati pensati per portare il creative coding sul territorio favorendo l'incontro, lo scambio e la condivisione.</p>
-      <p>Vuoi organizzare un evento, un gruppo di studio e ricerca o altro nella tua citt&agrave;? Scrivici!</p>
+  <div class="row rowPadding">
+    <div class="col-xs-12">      
     </div>
     {% for meetup in site.meetup %}
     <div class="col-xs-12 col-sm-4">
-      <h2>{{ meetup.title}}</h2>
-      <p>{{ meetup.excerpt | markdownify }}</p>
-      <ul class="list-inline">
-        <li><a href="mailto:{{ meetup.email }}"><i class="fa fa-inbox" aria-hidden="true"></i> Contatti</a></li>
-        {% if meetup.group != null %}
-        <li><a href="{{ meetup.group }}"><i class="fa fa-globe" aria-hidden="true"></i> Gruppo</a></li>
-        {% endif %}
-      </ul>
+      <div class="single">
+        <h3>{{ meetup.title}}</h3>
+        <p>{{ meetup.excerpt | markdownify }}</p>
+        <ul class="list-inline">
+          <li><a href="mailto:{{ meetup.email }}"><i class="fa fa-inbox" aria-hidden="true"></i> Contatti</a></li>
+          {% if meetup.group != null %}
+          <li><a href="{{ meetup.group }}"><i class="fa fa-globe" aria-hidden="true"></i> Gruppo</a></li>
+          {% endif %}
+        </ul>
+      </div>
     </div>
     {% endfor %}
+    <div class="col-xs-12 col-sm-4">
+      <div class="single negative">
+        <h3>Vuoi organizzare un evento, un gruppo di studio e ricerca o altro nella tua citt&agrave;?<br>
+        <a href="mailto:codiceinutile@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"></i> Scrivici!</a> </h3>
+      </div>
+    </div>
   </div>
 </div><!--/.container-->
-
 <!-- Google Maps API -->
 <script>
   function initMap() {
@@ -39,12 +45,12 @@ layout: default
       center: rome/*,
       mapTypeId: layer,
       mapTypeControlOptions: {
-          mapTypeIds: [layer]
+        mapTypeIds: [layer]
       }*/
     });
-
-
-   {% for meetup in site.meetup %}
+   // map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
+    
+    {% for meetup in site.meetup %}
       {% increment counter %}
 
       var contentString = '{{ meetup.title }}';
@@ -65,8 +71,6 @@ layout: default
       });
 
     {% endfor %}
-
-       // map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
 
   }
 </script>

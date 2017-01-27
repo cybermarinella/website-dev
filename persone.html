@@ -6,7 +6,7 @@ layout: default
 ---
 
 <div class="container" id="persone">
-  <div class="row page-title">
+  <div class="row page-title rowPadding">
     <div class="col-xs-12">
       <h1>Persone</h1>
       <p>Per modificare il template di questa pagina, modifica il file /persone.html</p>
@@ -15,7 +15,7 @@ layout: default
   <div class="row">
     {% for person in site.people %}
     <div class="col-xs-4 col-sm-3 text-center">
-      <div class="single-people">
+      <div class="single">
         <h3 class="text-center"><a href="{{ site.url }}{{ person.url }}">{{ person.display_name }}</a></h3>
         <p>{{ person.about }}</p>
       </div>

@@ -6065,7 +6065,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   /*sarebbe meglio correggere js*/ }
-  body a:hover, body h1, body .active, body a, body a:visited, body svg *, body .title, body h5 {
+  body a:hover, body h1, body .active, body a, body a:visited, body svg *, body .title, body h5, body .single {
     -webkit-animation: color-change 30s infinite !important;
     -moz-animation: color-change 30s infinite !important;
     -o-animation: color-change 30s infinite !important;
@@ -6082,7 +6082,7 @@ body {
     z-index: 100; }
     body a.navbar-brand:hover {
       text-decoration: underline; }
-  body blockquote, body .navbar-toggle .icon-bar, body .negative {
+  body blockquote, body .navbar-toggle .icon-bar, body .negative, body .negative a {
     -webkit-animation: background-change 30s infinite !important;
     -moz-animation: background-change 30s infinite !important;
     -o-animation: background-change 30s infinite !important;
@@ -6090,16 +6090,18 @@ body {
     animation: background-change 30s infinite !important;
     text-align: center;
     border: 0; }
-    body blockquote footer, body blockquote p, body .navbar-toggle .icon-bar footer, body .navbar-toggle .icon-bar p, body .negative footer, body .negative p {
+    body blockquote footer, body blockquote p, body .navbar-toggle .icon-bar footer, body .navbar-toggle .icon-bar p, body .negative footer, body .negative p, body .negative a footer, body .negative a p {
       color: #f2f2f2; }
   body blockquote {
     margin: 1em 0; }
-  body footer ul.social {
-    margin-top: 2.5em;
-    padding: 0; }
-    body footer ul.social li {
-      display: inline-block;
-      margin: 0 1em; }
+  body .site-footer {
+    padding: 3em 0; }
+    body .site-footer ul.social {
+      margin-top: 1em;
+      padding: 0; }
+      body .site-footer ul.social li {
+        display: inline-block;
+        margin: 0 1em; }
 
 #map {
   width: 100%;
@@ -6120,6 +6122,12 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0; }
+
+.textAlignRight {
+  text-align: right; }
+
+.textAlignCenter {
+  text-align: center; }
 
 .navbar-collapse {
   margin-top: 1em; }
@@ -6182,11 +6190,12 @@ html, body {
   .title svg {
     margin-top: -0.3em; }
 
-.single-people {
+.single {
   background: #fff;
   margin: 0;
-  min-height: 240px;
-  padding: 0.5em; }
+  padding: 1em; }
+  .single h1, .single h2, .single h3, .single h4 {
+    margin-top: 0; }
 
 svg .chiaro {
   animation: none !important;

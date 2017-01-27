@@ -12,7 +12,7 @@ body {
     font-size: 16px;
     overflow-x: hidden; /*sarebbe meglio correggere js*/
 
-    a:hover, h1, .active, a, a:visited, svg * , .title, h5{
+    a:hover, h1, .active, a, a:visited, svg * , .title, h5, .single{
       -webkit-animation: color-change 30s infinite !important;
       -moz-animation: color-change 30s infinite !important;
       -o-animation: color-change 30s infinite !important;
@@ -40,7 +40,7 @@ body {
       }
     }
 
-    blockquote, .navbar-toggle .icon-bar, .negative{
+    blockquote, .navbar-toggle .icon-bar, .negative, .negative a {
       -webkit-animation: background-change 30s infinite !important;
       -moz-animation: background-change 30s infinite !important;
       -o-animation: background-change 30s infinite !important;
@@ -58,9 +58,10 @@ body {
       margin: 1em 0;
     }
 
-    footer{
+    .site-footer{
+      padding:3em 0;
         ul.social {
-            margin-top:2.5em;
+            margin-top:1em;
             padding:0;
             li {
                 display:inline-block;
@@ -93,6 +94,15 @@ html, body{
   margin: 0;
   padding:0;
 }
+
+.textAlignRight{
+  text-align: right;
+}
+
+.textAlignCenter{
+  text-align: center;
+}
+
 .navbar-collapse{
   margin-top: 1em;
 }
@@ -176,11 +186,14 @@ html, body{
   }
 }
 
-.single-people{
+.single{
   background: $ultraWhite;
   margin: 0;
-  min-height: 240px;
-  padding:0.5em;
+  padding:1em;
+
+  h1, h2, h3, h4{
+    margin-top:0 ;
+  }
 }
 
 svg .chiaro{
