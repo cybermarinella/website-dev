@@ -6065,7 +6065,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   /*sarebbe meglio correggere js*/ }
-  body a:hover, body h1, body .active, body a, body a:visited, body svg *, body .title, body h5, body .single {
+  body a:hover, body h1, body .active, body a, body a:visited, body svg *, body .title, body h5, body .single h1, body .single h2, body .single h3 {
     -webkit-animation: color-change 30s infinite !important;
     -moz-animation: color-change 30s infinite !important;
     -o-animation: color-change 30s infinite !important;
@@ -6090,8 +6090,8 @@ body {
     animation: background-change 30s infinite !important;
     text-align: center;
     border: 0; }
-    body blockquote footer, body blockquote p, body .navbar-toggle .icon-bar footer, body .navbar-toggle .icon-bar p, body .negative footer, body .negative p, body .negative a footer, body .negative a p {
-      color: #f2f2f2; }
+    body blockquote footer, body blockquote p, body blockquote h1, body blockquote h2, body blockquote h3, body .navbar-toggle .icon-bar footer, body .navbar-toggle .icon-bar p, body .navbar-toggle .icon-bar h1, body .navbar-toggle .icon-bar h2, body .navbar-toggle .icon-bar h3, body .negative footer, body .negative p, body .negative h1, body .negative h2, body .negative h3, body .negative a footer, body .negative a p, body .negative a h1, body .negative a h2, body .negative a h3 {
+      color: #f2f2f2 !important; }
   body blockquote {
     margin: 1em 0; }
   body .site-footer {
